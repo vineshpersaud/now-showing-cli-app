@@ -1,5 +1,9 @@
-require "now_showing/version"
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
 
-module NowShowing
-  # Your code goes here...
-end
+
+require_relative "./now_showing/version"
+require_relative "./now_showing/showing"
+require_relative "./now_showing/opening"
+require_relative "./now_showing/cli"

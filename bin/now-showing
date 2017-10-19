@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "./lib/now_showing"
+
+NowShowing::CLI.new.call
+#NowShowing::Show.scrape_now_showing
+#NowShowing::Opening.scrape
