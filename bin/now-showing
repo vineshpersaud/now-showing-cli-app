@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "./lib/now_showing"
+
+NowShowing::CLI.new.call

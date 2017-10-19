@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "now/showing"
+require "now_showing"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
