@@ -1,7 +1,7 @@
 require 'pry'
 
 class NowShowing::Show
-<<<<<<< HEAD
+
   attr_accessor :name, :weekend,:gross,:link,:about,:metascore
   
   @@all=[]
@@ -45,7 +45,5 @@ class NowShowing::Show
     movie.about = doc.css('.summary_text').text.gsub("\n",' ').squeeze(' ')
     movie.metascore = doc.css('.metacriticScore').text.gsub("\n",' ').squeeze(' ')
   end
-=======
->>>>>>> e64af03802df66cdb7402e71515225939311d8c1
 
 end

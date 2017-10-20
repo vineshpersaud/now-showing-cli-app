@@ -4,8 +4,7 @@ require "bundler/setup"
 require "./lib/now_showing"
 
 NowShowing::CLI.new.call
-<<<<<<< HEAD
+
 #NowShowing::Show.scrape_now_showing
 #NowShowing::Opening.scrape
-=======
->>>>>>> e64af03802df66cdb7402e71515225939311d8c1
+

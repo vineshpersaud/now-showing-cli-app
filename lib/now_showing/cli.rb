@@ -21,20 +21,17 @@ class NowShowing::CLI
       if input == "1"
          top
       elsif input == "2"
-<<<<<<< HEAD
         opening
       elsif input == "exit"
         goodbye
-=======
       elsif input == "exit"
->>>>>>> e64af03802df66cdb7402e71515225939311d8c1
+
       else
         print "Please enter a valid option of 1/2 or exit. "
         menu
       end
   end
 
-<<<<<<< HEAD
 
   def top
     #Scrapes imdb.com for top ten movies and create array of instances of movies.
@@ -123,6 +120,5 @@ class NowShowing::CLI
     puts "Thank you for using Now Showing gem. Bye!"
   end
 
-=======
->>>>>>> e64af03802df66cdb7402e71515225939311d8c1
+
 end
