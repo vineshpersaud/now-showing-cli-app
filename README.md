@@ -1,7 +1,7 @@
 # NowShowing
 
 
-Welcome to your now showing gem! This Gem is a CLI that shows the current top ten movies and movies opening this week.You can also view a little info on this movie.All the information about the movies are scraped from IMDB.com
+Welcome to now showing gem! This Gem is a CLI that shows the current top ten movies and movies opening this week.You can also view a summary and metascore of these movies .All the information about the movies are scraped from IMDB.com
 
 
 ## Installation
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-  
+
 
 ## Development
 
@@ -38,4 +38,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/codees
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

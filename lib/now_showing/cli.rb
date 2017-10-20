@@ -1,35 +1,36 @@
 class NowShowing::CLI
-
   def call
     welcome
     menu
   end
 
   def welcome
+
     puts "Welcome to Now Showing"
     puts "What would you like to found out about?"
     puts ""
     puts "1. Top ten movies in theathers now"
     puts "2. Movings opening this week"
     puts ""
+
   end
 
   def menu
     input = nil
-      print "Please enter the number for the option you would like to see or exit to quit gem." 
-      input = gets.strip
+    print "Please enter the number for the option you would like to see or exit to quit gem."
+    input = gets.strip
+
       if input == "1"
          top
       elsif input == "2"
         opening
       elsif input == "exit"
         goodbye
-      elsif input == "exit"
-
       else
         print "Please enter a valid option of 1/2 or exit. "
         menu
       end
+
   end
 
 
@@ -38,21 +39,22 @@ class NowShowing::CLI
     NowShowing::Show.scrape_now_showing
     #puts list of top ten movies
     puts "The current top ten movies are:"
-    i=0
-      puts "                   Title              |  Gross         |  Weekend  "
-      puts ''
+    puts "                   Title              |  Gross         |  Weekend  "
+    puts ''
+
       NowShowing::Show.all.each_with_index do |movie ,index|
         puts "#{index+1}. #{movie.name.ljust(35)}| #{movie.gross.ljust(15)}| #{movie.weekend.ljust(15)}"
         # format text using .ljust
       end
 
-      #puts option to show extended info about movie by inputing movie number 
-      input = nil
-      puts ""
-      print "Would you like more info about a movie if so enter the movie number else type exit/return. "
+      #puts option to show extended info about movie by inputing movie number
+    input = nil
+    puts ""
+    print "Would you like more info about a movie if so enter the movie number else type exit/return. "
+
       while input != "exit"
         input = gets.strip
-        if (1..10).to_a.include?(input.to_i)
+        if  input.to_i.between?(1, 10)
           movie = NowShowing::Show.all[input.to_i-1]
           NowShowing::Show.more_info(movie)
           puts ""
@@ -80,9 +82,8 @@ class NowShowing::CLI
     NowShowing::Opening.scrape
     #puts list of top ten movies
     puts "Movies opening this week are:"
-    
-      puts "                   Title                   "
-      puts ''
+    puts "                   Title                   "
+    puts ''
 
       NowShowing::Opening.all.each_with_index do |movie,index|
         puts "#{index+1}. #{movie.name.ljust(35)}"
@@ -91,7 +92,8 @@ class NowShowing::CLI
         input = nil
         while input != "exit"
         input = gets.strip
-        if (1..NowShowing::Opening.all.length).to_a.include?(input.to_i)
+        #if (1..NowShowing::Opening.all.length).to_a.include?(input.to_i)
+        if  input.to_i.between?(1, NowShowing::Opening.all.count)
           movie = NowShowing::Opening.all[input.to_i-1]
           puts ""
           puts "#{movie.name}"
@@ -112,7 +114,6 @@ class NowShowing::CLI
           print "Please enter valid  a option."
         end
       end
-    
   end
 
   def goodbye
