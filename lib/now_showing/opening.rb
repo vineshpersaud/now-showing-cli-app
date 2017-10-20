@@ -1,4 +1,5 @@
 class NowShowing::Opening
+<<<<<<< HEAD
 
   attr_accessor :name,:about,:metascore
 
@@ -36,3 +37,7 @@ class NowShowing::Opening
   end
 
 end
+=======
+ 
+end
+>>>>>>> e64af03802df66cdb7402e71515225939311d8c1
