@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # NowShowing
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/now_showing`. To experiment with that code, run `bin/console` for an interactive prompt.
+=======
+# Now::Showing
+
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/now/showing`. To experiment with that code, run `bin/console` for an interactive prompt.
+>>>>>>> bd91a844aa37a77f2397c223b5da79ebb86c0824
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -9,7 +15,11 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
+<<<<<<< HEAD
 gem 'now_showing'
+=======
+gem 'now-showing'
+>>>>>>> bd91a844aa37a77f2397c223b5da79ebb86c0824
 ```
 
 And then execute:
@@ -18,7 +28,11 @@ And then execute:
 
 Or install it yourself as:
 
+<<<<<<< HEAD
     $ gem install now_showing
+=======
+    $ gem install now-showing
+>>>>>>> bd91a844aa37a77f2397c223b5da79ebb86c0824
 
 ## Usage
 
@@ -32,10 +46,18 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
+<<<<<<< HEAD
 Bug reports and pull requests are welcome on GitHub at https://github.com/codeesh/now_showing. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+=======
+Bug reports and pull requests are welcome on GitHub at https://github.com/codeesh/now-showing. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+>>>>>>> bd91a844aa37a77f2397c223b5da79ebb86c0824
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+<<<<<<< HEAD
+=======
+# now-showing-cli-app
+>>>>>>> bd91a844aa37a77f2397c223b5da79ebb86c0824

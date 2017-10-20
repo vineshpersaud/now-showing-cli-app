@@ -1,27 +1,28 @@
 class NowShowing::Opening
- 
+
   attr_accessor :name,:about,:metascore
-  
+
   @@all=[]
-  
+
   def initialize(name,about,metascore)
     @name=name
     @about=about
     @metascore=metascore
-    @@all << self 
+    @@all << self
   end
-    
+
   def self.scrape
     doc = Nokogiri::HTML(open("http://www.imdb.com/movies-in-theaters/"))
-    doc.css(".list_item").each do |movie| 
+    doc.css(".list_item").each do |movie|
       name = movie.css(".overview-top").css('h4').text
       about = movie.css('.outline').text.strip
       metascore = movie.css('.metascore').text.strip
-      metascore = "Metacritic score not yet available" if metascore == "" 
+      metascore = "Metacritic score not yet available" if metascore == ""
       self.new(name,about,metascore)
-      
+
     end
     #remove last ten form list which are the weeks top ten
+
     @@all = @@all[0..-11] 
   end
 
