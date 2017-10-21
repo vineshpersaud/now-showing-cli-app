@@ -3,9 +3,9 @@ require 'pry'
 class NowShowing::Show
 
   attr_accessor :name, :weekend,:gross,:link,:about,:metascore
-  
+
   @@all=[]
-  
+
   def initialize(name,weekend,gross,link,about=nil,metascore=nil)
     @name=name
     @weekend=weekend
@@ -13,9 +13,9 @@ class NowShowing::Show
     @link=link
     @about=about
     @metascore=metascore
-    @@all << self 
+    @@all << self
   end
-    
+
   def self.scrape_now_showing
     doc = Nokogiri::HTML(open("http://www.imdb.com/chart/boxoffice?ref_=nv_ch_cht_1 "))
     doc.css("#boxoffice").css('tr').each do |movie|

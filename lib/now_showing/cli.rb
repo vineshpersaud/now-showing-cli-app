@@ -56,7 +56,8 @@ class NowShowing::CLI
         input = gets.strip
         if  input.to_i.between?(1, 10)
           movie = NowShowing::Show.all[input.to_i-1]
-          NowShowing::Show.more_info(movie)
+          #scrapes addtional movie info if not already scraped
+          NowShowing::Show.more_info(movie) if movie.about  == nil || movie.metascore == nil
           puts ""
           puts "#{movie.name}"
           puts ""
