@@ -16,7 +16,7 @@ class NowShowing::CLI
     def menu
       input = nil
       print "Please enter the number for the option you would like to see or exit to quit gem."
-      input = gets.strip
+      input = gets.strip.downcase
 
         if input == "1"
            top
@@ -35,11 +35,11 @@ class NowShowing::CLI
       NowShowing::Show.scrape_now_showing
       #puts list of top ten movies
       puts "The current top ten movies are:"
-      puts "                   Title              |  Gross         |  Weekend  "
+      puts "                   Title                   |  Gross         |  Weekend  "
       puts ''
 
       NowShowing::Show.all.each_with_index do |movie ,index|
-        puts "#{index+1}. #{movie.name.ljust(35)}| #{movie.gross.ljust(15)}| #{movie.weekend.ljust(15)}"
+        puts "#{index+1}. #{movie.name.strip.ljust(40)}| #{movie.gross.ljust(15)}| #{movie.weekend.ljust(15)}"
           # format text using .ljust
       end
       #puts option to show extended info about movie by inputing movie number
@@ -48,7 +48,7 @@ class NowShowing::CLI
       print "Would you like more info about a movie if so enter the movie number else type exit/return. "
 
         while input != "exit"
-          input = gets.strip
+          input = gets.strip.downcase
             if  input.to_i.between?(1, 10)
               movie = NowShowing::Show.all[input.to_i-1]
               #scrapes addtional movie info if not already scraped
@@ -89,7 +89,7 @@ class NowShowing::CLI
       print "Please select a movie by number you would like more info on or you can return at exit. "
       input = nil
       while input != "exit"
-      input = gets.strip
+      input = gets.strip.downcase
       #if (1..NowShowing::Opening.all.length).to_a.include?(input.to_i)
       if  input.to_i.between?(1, NowShowing::Opening.all.count)
         movie = NowShowing::Opening.all[input.to_i-1]
