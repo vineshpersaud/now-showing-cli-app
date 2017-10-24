@@ -1,9 +1,4 @@
-require 'open-uri'
-require 'nokogiri'
-require 'pry'
+module NowShowing
+end
 
-
-require_relative "./now_showing/version"
-require_relative "./now_showing/showing"
-require_relative "./now_showing/opening"
-require_relative "./now_showing/cli"
+require_relative '../config/environment'
