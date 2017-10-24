@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{ }
   spec.homepage      = "http://codeesh.github.io/"
   spec.license       = "MIT"
-  spec.files         = ["./lib/now_showing.rb","./lib/now_showing/cli.rb","./lib/now_showing/opening.rb","./lib/now_showing/showing.rb", "config/environment.rb"]
+  spec.files         = ["lib/now_showing.rb","lib/now_showing/cli.rb","lib/now_showing/opening.rb","lib/now_showing/showing.rb", "config/environment.rb"]
   spec.executables << 'now-showing'
 
 
