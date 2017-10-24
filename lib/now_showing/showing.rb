@@ -1,5 +1,3 @@
-require 'pry'
-
 class NowShowing::Show
 
   attr_accessor :name, :weekend,:gross,:link,:about,:metascore

@@ -6,7 +6,7 @@ Welcome to now showing gem! This Gem is a CLI that shows the current top ten mov
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install by entering:
 
 ```ruby
 gem 'now_showing'
@@ -14,11 +14,7 @@ gem 'now_showing'
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install now_showing
+     now_showing
 
 ## Usage
 
