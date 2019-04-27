@@ -9,12 +9,12 @@ Welcome to now showing gem! This Gem is a CLI that shows the current top ten mov
 Install by entering:
 
 ```ruby
-gem 'now_showing'
+gem install 'now_showing'
 ```
 
 And then execute:
 
-     now_showing
+     now-showing
 
 ## Usage
 
